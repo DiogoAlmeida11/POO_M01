@@ -109,8 +109,17 @@
         console.log(isPrime ? "primo" : "não primo"); // ou fazer if*/
 
         let randomNumber = Math.floor(Math.random() + 1)
+        let chances = 0
+        let limitedChances = 5
+        alert(randomNumber)
     
-        do{
+        /*do{
+            chances ++;
+            if (chances > limitedChances){
+                alert()
+            }
+            
+
             let number = +prompt("Adivinhe o número!")
             if (number == randomNumber) {
                 alert("Parabens, acertou!")
@@ -121,7 +130,25 @@
             else if (number < randomNumber){
                 alert("Errou, o numero é maior, tente novamente")
             }
-        }while (randomNumber != number);
+        }while (randomNumber != number);*/
+
+        for (let i = 0; i < 5; i++) {
+            let number = +prompt("Adivinhe o número!")
+            if (number == randomNumber) {
+                alert("Parabens, acertou!")
+                break
+            }
+            else if (number > randomNumber){
+                alert("Errou, o numero é menor, tente novamente")
+            }
+            else if (number < randomNumber){
+                alert("Errou, o numero é maior, tente novamente")
+            }
+            else{
+                alert("Perdeu!")
+                break
+            }
+        }
         
 
     
