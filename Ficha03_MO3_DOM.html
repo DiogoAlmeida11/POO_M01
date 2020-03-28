@@ -16,69 +16,82 @@
 </div>
 <span>Olha um segundo span</span>
 
+<input type="text">
+<p></p>
+
+
 <script>
     // alinea b
 
-    const p2 = document.getElementById("p2")
-    console.log(p2);
+    /*const p2 = document.getElementById("p2")
+    console.log(p2);*/
 
     // alinea c
 
-    const ps = document.getElementsByTagName("p")
+    /*const ps = document.getElementsByTagName("p")
     for (const p of ps) {
         console.log(p);
         
-    }
+    }*/
     
     // alinea d
 
-    const psContents = document.getElementsByTagName("p")
+    /*const psContents = document.getElementsByTagName("p")
     for (const p of psContents) {
         console.log(p.innerHTML);
         
-    }
+    }*/
 
     //alinea e
 
-    const elemsRed = document.getElementsByClassName("red")
+    /*const elemsRed = document.getElementsByClassName("red")
     for (const elm of elemsRed) {
         console.log(elm);
         
-    }
+    }*/
 
     // linea f
 
-    const p3 = document.querySelector("p#p3")
-    console.log(p3);
+    /*const p3 = document.querySelector("p#p3")
+    console.log(p3);*/
     
     // alinea g 
 
-    const pDivs = document.querySelectorAll("p,div")
+    /*const pDivs = document.querySelectorAll("p,div")
     for (const elm of pDivs) {
         console.log(elm.innerHTML);
         
-    }
+    }*/
 
     // alinea h
 
-    const spans = document.querySelectorAll("span")
+    /*const spans = document.querySelectorAll("span")
     for (const elm of spans) {
         console.log(elm.innerHTML);
         
-    }
+    }*/
 
     //alinea i 
 
-    const spanDiv = document.querySelector("div span")
-    console.log(spanDvin.innerHTML);
+    /*const spanDiv = document.querySelector("div span")
+    console.log(spanDvin.innerHTML);*/
 
     // alinea j
 
-    const spanCutDiv = document.querySelector("body>span")
-    console.log(spanCutDiv.innerHTML);
+    /*const spanCutDiv = document.querySelector("body>span")
+    console.log(spanCutDiv.innerHTML);*/
     
-    
+    const myTestbox = document.querySelector('input[type="text"]')
+    const myP = document.querySelector('p')
+    myTestbox.addEventListener('input', function (){
+        myP.innerHTML = myTestbox.value;
+    })
 
+
+    const myButton = querySelector('input[type="button"]')
+    myButton.addEventListener('click', function(){
+        alert(myTestbox.value.length)
+    })
 
 
 </script>
